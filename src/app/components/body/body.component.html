@@ -1,0 +1,51 @@
+<div class="container">
+
+    <h1>JUJUTSU KAISEN</h1>
+
+    <div class="row">
+        <div class="col-5 card-1">
+            <h2>Frases Favoritas</h2>
+
+            <hr>
+
+            <div *ngIf="mostrar" class="card bg-dark text-white">
+                <img src="https://thuvienanime.com/wp-content/uploads/2021/09/Gojo-Satoru.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">{{frase_1.autor}}</h5>
+                    <p class="card-text">{{frase_1.mensaje}}</p>
+                </div>
+            </div>
+
+            <div *ngIf="mostrar" class="card bg-dark text-white">
+                <img src="https://b-static.besthdwallpaper.com/jujutsu-kaisen-yuta-okkotsu-4k-papel-pintado-2880x1620-90090_52.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">{{frase_2.autor}}</h5>
+                    <p class="card-text">{{frase_2.mensaje}}</p>
+                </div>
+            </div>
+
+            <div *ngIf="mostrar" class="card bg-dark text-white">
+                <img src="https://codigoespagueti.com/wp-content/uploads/2022/05/jujutsu-kaisen-nanami-kento-cosplay.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">{{frase_3.autor}}</h5>
+                    <p class="card-text">{{frase_3.mensaje}}</p>
+                </div>
+            </div>
+            <button (click)="mostrar = !mostrar" class="btn btn-outline-primary btn-block">Mostrar/Ocultar</button>
+        </div>
+
+
+        <div class="col-6">
+            <h2>Otros personajes</h2>
+
+            <hr>
+            <div>
+                <ul class="list-group">
+                    <li *ngFor="let item of personajes" class="list-group-item">{{item}}</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
